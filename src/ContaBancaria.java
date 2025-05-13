@@ -3,7 +3,7 @@ public class ContaBancaria {
     private String nomeDoUsuario;
     private double saldo;
 
-    public ContaBancaria(String idDaconta, String nomeDoUsuario, double Saldo){
+    public ContaBancaria(String idDaconta, String nomeDoUsuario, double saldo){
         this.idDaConta = idDaconta;
         this.nomeDoUsuario = nomeDoUsuario;
         this.saldo = saldo;
@@ -44,5 +44,10 @@ public class ContaBancaria {
             saldo-=valor;
             contaOutra.saldo += valor;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: "+ this.nomeDoUsuario+"\nNúmero da conta: "+this.idDaConta+"\nSaldo: R$"+this.saldo;
     }
 }
